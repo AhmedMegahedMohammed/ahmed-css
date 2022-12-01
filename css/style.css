@@ -1,0 +1,272 @@
+/* start variables */
+:root {
+    --main-color: #313131;
+}
+/* end variables */
+
+
+/* start of global rules */
+
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+    font-family: "Work Sans", sans-serif;
+    }
+    h1::selection {
+background-color:rgb(131, 131, 131) ;
+    }
+
+    p::selection {
+background-color:rgb(129, 129, 129) ;
+    }
+    h3::selection {
+background-color:rgb(129, 129, 129) ;
+    }
+
+/* end of global rules */
+
+/* start body */
+body {
+font-family: 'Ruda', sans-serif;
+}
+
+/* end body */
+
+/* start of container and parent */
+.parent {
+padding: 0px;
+
+}
+
+.container {
+    margin-left:auto ;
+    margin-right:auto ;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+}
+
+
+/* end of container and parent */
+
+
+/* start responsive codes */
+
+/* small */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* medium */
+
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+/* large */
+
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end responsive codes */
+
+/* start header */
+
+.header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.header .logo {
+
+    width: 12vw;
+}
+
+.header .links {
+
+    position: relative;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.header .links .icon {
+
+width: 30px;
+display: flex;
+flex-wrap: wrap;
+}
+.header .links .icon span {
+    background-color: #181818;
+    margin-bottom: 6px;
+    height: 2px;
+}
+
+.header .links .icon span:first-child {
+    height: 2px;
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+height: 2px;
+width: 70%;
+transition: 0.3s;
+}
+
+.header .links .icon span:last-child {
+    height: 2px;
+    width: 100%;
+}
+
+.header ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    background-color: #181818;
+    position: absolute;
+    right: 0;
+    min-width: 165px;
+    top: calc(100% + 12px);
+    border-radius: 10pt;
+    display: none;
+}
+
+.header .links ul::before {
+content: "";
+border-width: 10px;
+border-style: solid;
+border-color: transparent transparent #181818 transparent;
+position: absolute;
+right: 15px;
+top: -19px;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 13px;
+    text-decoration: none;
+    color: rgb(250, 249, 249);
+    font-size: 2.3vw;
+transition: 0.4s;
+}
+
+.header .links ul li a:hover {
+    padding-left: 22px;
+    font-size: 2.6vw;
+    opacity: 0.7;
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid rgb(114, 114, 114);
+    border-bottom-left-radius: 5pt;
+    border-bottom-right-radius: 5pt;
+}
+
+.header .links:hover ul {
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* end header */
+.landing {
+    background-image: url(../images/mountain4.jpg);
+    border-radius: 10pt;
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -70%);
+}
+
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--main-color);
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: #313131;
+    transition: 0.5s;
+}
+
+.landing .intro-text h1:hover {
+
+    font-size: 64px;
+    transition: 0.5s;
+    padding-bottom: 15px ;
+}
+.landing .intro-text p:hover {
+
+    font-size: 20px;
+    transition: 0.5s;
+    padding-bottom: 10px ;
+}
+
+.landing .intro-text p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--main-color);
+    line-height: 1.5;
+    transition: 0.5s;
+}
+
+/* start features */
+.functions {
+padding-top: 60px;
+padding-bottom: 60px;
+background-color: gainsboro;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+padding: 20px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+
+i:hover {
+    font-size: calc(16 * 4px);
+    padding: 5px;
+    transition: 0.3s;
+}
+/* end features */
+i {
+    font-size: calc(16 * 3px);
+transition: 0.3s;
+}
+.feat h3 {
+    font-size: 22px;
+}
+
